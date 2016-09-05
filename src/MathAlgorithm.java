@@ -76,6 +76,23 @@ public class MathAlgorithm {
 		System.out.println("============================================");
 		PI.main(changeInput);
 		System.out.println(parent + ".java :: main() :: " + Topic + " : " +  verifyResult("output.txt", topic + "_expected_output.txt"));
+		
+		/*
+		 * Inverse Matrix
+		 */
+		topic = "inverse_matrix";
+		Topic = "Inverse Matrix";
+		changeInput = getInputFromFile(topic + "_input.txt");
+		
+		if (changeInput == null) {
+			System.out.println(parent + ".java :: main() :: No strings read from " + topic + "_input.txt thus HALTing....");
+			return;
+		}	
+		System.out.println("============================================");
+		System.out.println(Topic + " Called");
+		System.out.println("============================================");
+		InverseMatrix.main(changeInput);
+		System.out.println(parent + ".java :: main() :: " + Topic + " : " +  verifyResult("output.txt", topic + "_expected_output.txt"));
 	}
 	
 	private static String getInputFromFile(String path) {
