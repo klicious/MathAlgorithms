@@ -93,6 +93,23 @@ public class MathAlgorithm {
 		System.out.println("============================================");
 		InverseMatrix.main(changeInput);
 		System.out.println(parent + ".java :: main() :: " + Topic + " : " +  verifyResult("output.txt", topic + "_expected_output.txt"));
+		
+		/*
+		 * Rank Prediction
+		 */
+		topic = "rank_prediction";
+		Topic = "Rank Prediction";
+		changeInput = getInputFromFile(topic + "_input.txt");
+		
+		if (changeInput == null) {
+			System.out.println(parent + ".java :: main() :: No strings read from " + topic + "_input.txt thus HALTing....");
+			return;
+		}	
+		System.out.println("============================================");
+		System.out.println(Topic + " Called");
+		System.out.println("============================================");
+		RankPrediction.main(changeInput);
+		System.out.println(parent + ".java :: main() :: " + Topic + " : " +  verifyResult("output.txt", topic + "_expected_output.txt"));
 	}
 	
 	private static String getInputFromFile(String path) {
